@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@aws-sdk/client-route-53": "^3.554.0",
     "aws-sdk": "^2.1598.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
