@@ -4,8 +4,11 @@ const cors = require('cors');
 const AWS = require('aws-sdk');
 
 const app = express();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ca4733a39ffd9ab20d36854b096227b5c598c19f
 app.use(cors());
 
 app.use(bodyParser.json());
