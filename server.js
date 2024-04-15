@@ -5,12 +5,8 @@ const AWS = require('aws-sdk');
 
 const app = express();
 
-// Enable CORS for all routes
-app.use(cors({
-  origin: 'https://dns-manager-nine.vercel.app',
-}));
 
-//app.use(cors());
+app.use(cors());
 
 app.use(bodyParser.json());
 
