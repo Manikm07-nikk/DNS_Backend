@@ -7,6 +7,7 @@ const AWS = require('aws-sdk');
 const app = express();
 
 app.use(cors());
+app.use(allowCors);
 
 app.use(bodyParser.json());
 
