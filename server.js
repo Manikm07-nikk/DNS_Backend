@@ -12,8 +12,14 @@ app.use(allowCors);
 app.use(bodyParser.json());
 
 // Set up AWS credentials and configure AWS SDK
-AWS.config.update({ region: 'ap-south-1' });
-const route53 = new AWS.Route53();
+
+const route53 = new AWS.Route53({
+  region: 'ap-south-1', // For example, 'us-east-1'
+  credentials: {
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
+  }
+});
 
 app.post('/api/dns/create', async (req, res) => {
   const { domain, type, value } = req.body;
