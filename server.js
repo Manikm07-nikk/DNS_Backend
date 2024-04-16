@@ -1,4 +1,5 @@
 const express = require('express');
+const allowCors = require('./allowCors');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const AWS = require('aws-sdk');
